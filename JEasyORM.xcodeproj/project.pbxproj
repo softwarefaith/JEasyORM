@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */; };
+		2E59EF511F0AA03300952A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF501F0AA03300952A70 /* ViewController.swift */; };
+		2E59EF541F0AA03300952A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E59EF521F0AA03300952A70 /* Main.storyboard */; };
+		2E59EF561F0AA03300952A70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E59EF551F0AA03300952A70 /* Assets.xcassets */; };
+		2E59EF591F0AA03300952A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E59EF571F0AA03300952A70 /* LaunchScreen.storyboard */; };
+		2E59EF641F0AA03300952A70 /* JEasyORMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF631F0AA03300952A70 /* JEasyORMTests.swift */; };
+		2E59EF6F1F0AA03300952A70 /* JEasyORMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF6E1F0AA03300952A70 /* JEasyORMUITests.swift */; };
+		2E59EF801F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */; };
+		2E59EF811F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E59EF601F0AA03300952A70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E59EF431F0AA03300952A70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E59EF4A1F0AA03300952A70;
+			remoteInfo = JEasyORM;
+		};
+		2E59EF6B1F0AA03300952A70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E59EF431F0AA03300952A70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E59EF4A1F0AA03300952A70;
+			remoteInfo = JEasyORM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E59EF4B1F0AA03300952A70 /* JEasyORM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JEasyORM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E59EF501F0AA03300952A70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E59EF531F0AA03300952A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E59EF551F0AA03300952A70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E59EF581F0AA03300952A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E59EF5A1F0AA03300952A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E59EF5F1F0AA03300952A70 /* JEasyORMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JEasyORMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E59EF631F0AA03300952A70 /* JEasyORMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEasyORMTests.swift; sourceTree = "<group>"; };
+		2E59EF651F0AA03300952A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E59EF6A1F0AA03300952A70 /* JEasyORMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JEasyORMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E59EF6E1F0AA03300952A70 /* JEasyORMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEasyORMUITests.swift; sourceTree = "<group>"; };
+		2E59EF701F0AA03300952A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyORMDBConnection.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E59EF481F0AA03300952A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E59EF5C1F0AA03300952A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E59EF671F0AA03300952A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E59EF421F0AA03300952A70 = {
+			isa = PBXGroup;
+			children = (
+				2E59EF7C1F0AA06F00952A70 /* JEasyORMSource */,
+				2E59EF4D1F0AA03300952A70 /* JEasyORM */,
+				2E59EF621F0AA03300952A70 /* JEasyORMTests */,
+				2E59EF6D1F0AA03300952A70 /* JEasyORMUITests */,
+				2E59EF4C1F0AA03300952A70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E59EF4C1F0AA03300952A70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E59EF4B1F0AA03300952A70 /* JEasyORM.app */,
+				2E59EF5F1F0AA03300952A70 /* JEasyORMTests.xctest */,
+				2E59EF6A1F0AA03300952A70 /* JEasyORMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E59EF4D1F0AA03300952A70 /* JEasyORM */ = {
+			isa = PBXGroup;
+			children = (
+				2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */,
+				2E59EF501F0AA03300952A70 /* ViewController.swift */,
+				2E59EF521F0AA03300952A70 /* Main.storyboard */,
+				2E59EF551F0AA03300952A70 /* Assets.xcassets */,
+				2E59EF571F0AA03300952A70 /* LaunchScreen.storyboard */,
+				2E59EF5A1F0AA03300952A70 /* Info.plist */,
+			);
+			path = JEasyORM;
+			sourceTree = "<group>";
+		};
+		2E59EF621F0AA03300952A70 /* JEasyORMTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E59EF631F0AA03300952A70 /* JEasyORMTests.swift */,
+				2E59EF651F0AA03300952A70 /* Info.plist */,
+			);
+			path = JEasyORMTests;
+			sourceTree = "<group>";
+		};
+		2E59EF6D1F0AA03300952A70 /* JEasyORMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E59EF6E1F0AA03300952A70 /* JEasyORMUITests.swift */,
+				2E59EF701F0AA03300952A70 /* Info.plist */,
+			);
+			path = JEasyORMUITests;
+			sourceTree = "<group>";
+		};
+		2E59EF7C1F0AA06F00952A70 /* JEasyORMSource */ = {
+			isa = PBXGroup;
+			children = (
+				2E59EF7D1F0AA06F00952A70 /* Core */,
+				2E59EF7E1F0AA06F00952A70 /* Util */,
+			);
+			path = JEasyORMSource;
+			sourceTree = "<group>";
+		};
+		2E59EF7D1F0AA06F00952A70 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2E59EF7E1F0AA06F00952A70 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E59EF4A1F0AA03300952A70 /* JEasyORM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E59EF731F0AA03300952A70 /* Build configuration list for PBXNativeTarget "JEasyORM" */;
+			buildPhases = (
+				2E59EF471F0AA03300952A70 /* Sources */,
+				2E59EF481F0AA03300952A70 /* Frameworks */,
+				2E59EF491F0AA03300952A70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JEasyORM;
+			productName = JEasyORM;
+			productReference = 2E59EF4B1F0AA03300952A70 /* JEasyORM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E59EF5E1F0AA03300952A70 /* JEasyORMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E59EF761F0AA03300952A70 /* Build configuration list for PBXNativeTarget "JEasyORMTests" */;
+			buildPhases = (
+				2E59EF5B1F0AA03300952A70 /* Sources */,
+				2E59EF5C1F0AA03300952A70 /* Frameworks */,
+				2E59EF5D1F0AA03300952A70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E59EF611F0AA03300952A70 /* PBXTargetDependency */,
+			);
+			name = JEasyORMTests;
+			productName = JEasyORMTests;
+			productReference = 2E59EF5F1F0AA03300952A70 /* JEasyORMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E59EF691F0AA03300952A70 /* JEasyORMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E59EF791F0AA03300952A70 /* Build configuration list for PBXNativeTarget "JEasyORMUITests" */;
+			buildPhases = (
+				2E59EF661F0AA03300952A70 /* Sources */,
+				2E59EF671F0AA03300952A70 /* Frameworks */,
+				2E59EF681F0AA03300952A70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E59EF6C1F0AA03300952A70 /* PBXTargetDependency */,
+			);
+			name = JEasyORMUITests;
+			productName = JEasyORMUITests;
+			productReference = 2E59EF6A1F0AA03300952A70 /* JEasyORMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E59EF431F0AA03300952A70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "蔡杰";
+				TargetAttributes = {
+					2E59EF4A1F0AA03300952A70 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					2E59EF5E1F0AA03300952A70 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2E59EF4A1F0AA03300952A70;
+					};
+					2E59EF691F0AA03300952A70 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2E59EF4A1F0AA03300952A70;
+					};
+				};
+			};
+			buildConfigurationList = 2E59EF461F0AA03300952A70 /* Build configuration list for PBXProject "JEasyORM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E59EF421F0AA03300952A70;
+			productRefGroup = 2E59EF4C1F0AA03300952A70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E59EF4A1F0AA03300952A70 /* JEasyORM */,
+				2E59EF5E1F0AA03300952A70 /* JEasyORMTests */,
+				2E59EF691F0AA03300952A70 /* JEasyORMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E59EF491F0AA03300952A70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E59EF591F0AA03300952A70 /* LaunchScreen.storyboard in Resources */,
+				2E59EF561F0AA03300952A70 /* Assets.xcassets in Resources */,
+				2E59EF541F0AA03300952A70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E59EF5D1F0AA03300952A70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E59EF681F0AA03300952A70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E59EF471F0AA03300952A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E59EF511F0AA03300952A70 /* ViewController.swift in Sources */,
+				2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */,
+				2E59EF801F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E59EF5B1F0AA03300952A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E59EF641F0AA03300952A70 /* JEasyORMTests.swift in Sources */,
+				2E59EF811F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E59EF661F0AA03300952A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E59EF6F1F0AA03300952A70 /* JEasyORMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E59EF611F0AA03300952A70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E59EF4A1F0AA03300952A70 /* JEasyORM */;
+			targetProxy = 2E59EF601F0AA03300952A70 /* PBXContainerItemProxy */;
+		};
+		2E59EF6C1F0AA03300952A70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E59EF4A1F0AA03300952A70 /* JEasyORM */;
+			targetProxy = 2E59EF6B1F0AA03300952A70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E59EF521F0AA03300952A70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E59EF531F0AA03300952A70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E59EF571F0AA03300952A70 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E59EF581F0AA03300952A70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E59EF711F0AA03300952A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E59EF721F0AA03300952A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E59EF741F0AA03300952A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JEasyORM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.JEasyORM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2E59EF751F0AA03300952A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JEasyORM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.JEasyORM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2E59EF771F0AA03300952A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JEasyORMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.JEasyORMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JEasyORM.app/JEasyORM";
+			};
+			name = Debug;
+		};
+		2E59EF781F0AA03300952A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JEasyORMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.JEasyORMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JEasyORM.app/JEasyORM";
+			};
+			name = Release;
+		};
+		2E59EF7A1F0AA03300952A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = JEasyORMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.JEasyORMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = JEasyORM;
+			};
+			name = Debug;
+		};
+		2E59EF7B1F0AA03300952A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = JEasyORMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.JEasyORMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = JEasyORM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E59EF461F0AA03300952A70 /* Build configuration list for PBXProject "JEasyORM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E59EF711F0AA03300952A70 /* Debug */,
+				2E59EF721F0AA03300952A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E59EF731F0AA03300952A70 /* Build configuration list for PBXNativeTarget "JEasyORM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E59EF741F0AA03300952A70 /* Debug */,
+				2E59EF751F0AA03300952A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E59EF761F0AA03300952A70 /* Build configuration list for PBXNativeTarget "JEasyORMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E59EF771F0AA03300952A70 /* Debug */,
+				2E59EF781F0AA03300952A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E59EF791F0AA03300952A70 /* Build configuration list for PBXNativeTarget "JEasyORMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E59EF7A1F0AA03300952A70 /* Debug */,
+				2E59EF7B1F0AA03300952A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E59EF431F0AA03300952A70 /* Project object */;
+}
