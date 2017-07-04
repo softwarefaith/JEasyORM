@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E162DBA1F0B74C60092126B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E162DB91F0B74C60092126B /* libsqlite3.0.tbd */; };
 		2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */; };
 		2E59EF511F0AA03300952A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF501F0AA03300952A70 /* ViewController.swift */; };
 		2E59EF541F0AA03300952A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E59EF521F0AA03300952A70 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E162DB71F0B74A60092126B /* JEasyBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JEasyBridge.h; sourceTree = "<group>"; };
+		2E162DB91F0B74C60092126B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2E59EF4B1F0AA03300952A70 /* JEasyORM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JEasyORM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E59EF501F0AA03300952A70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E162DBA1F0B74C60092126B /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,14 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E162DB81F0B74C60092126B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E162DB91F0B74C60092126B /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E59EF421F0AA03300952A70 = {
 			isa = PBXGroup;
 			children = (
+				2E162DB71F0B74A60092126B /* JEasyBridge.h */,
 				2E59EF7C1F0AA06F00952A70 /* JEasyORMSource */,
 				2E59EF4D1F0AA03300952A70 /* JEasyORM */,
 				2E59EF621F0AA03300952A70 /* JEasyORMTests */,
 				2E59EF6D1F0AA03300952A70 /* JEasyORMUITests */,
 				2E59EF4C1F0AA03300952A70 /* Products */,
+				2E162DB81F0B74C60092126B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -446,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.JEasyORM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/JEasyBridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -458,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.JEasyORM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/JEasyBridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -535,6 +551,7 @@
 				2E59EF751F0AA03300952A70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E59EF761F0AA03300952A70 /* Build configuration list for PBXNativeTarget "JEasyORMTests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +560,7 @@
 				2E59EF781F0AA03300952A70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E59EF791F0AA03300952A70 /* Build configuration list for PBXNativeTarget "JEasyORMUITests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +569,7 @@
 				2E59EF7B1F0AA03300952A70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
