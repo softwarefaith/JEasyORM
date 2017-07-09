@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E162DBA1F0B74C60092126B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E162DB91F0B74C60092126B /* libsqlite3.0.tbd */; };
 		2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */; };
 		2E59EF511F0AA03300952A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF501F0AA03300952A70 /* ViewController.swift */; };
 		2E59EF541F0AA03300952A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E59EF521F0AA03300952A70 /* Main.storyboard */; };
@@ -17,6 +16,7 @@
 		2E59EF6F1F0AA03300952A70 /* JEasyORMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF6E1F0AA03300952A70 /* JEasyORMUITests.swift */; };
 		2E59EF801F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */; };
 		2E59EF811F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */; };
+		2E6C78D81F11E7B400702167 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6C78D71F11E7B400702167 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 		2E59EF6E1F0AA03300952A70 /* JEasyORMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEasyORMUITests.swift; sourceTree = "<group>"; };
 		2E59EF701F0AA03300952A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyORMDBConnection.swift; sourceTree = "<group>"; };
+		2E6C78D71F11E7B400702167 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E162DBA1F0B74C60092126B /* libsqlite3.0.tbd in Frameworks */,
+				2E6C78D81F11E7B400702167 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +85,7 @@
 		2E162DB81F0B74C60092126B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E6C78D71F11E7B400702167 /* libsqlite3.tbd */,
 				2E162DB91F0B74C60092126B /* libsqlite3.0.tbd */,
 			);
 			name = Frameworks;

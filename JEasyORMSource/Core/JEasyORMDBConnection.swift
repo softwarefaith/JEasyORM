@@ -8,9 +8,16 @@
 
 import UIKit
 
+let kQueueLabel = "com.JEasy.ORMDBConnection"
+
 public final class JEasyORMDBConnection {
     
-//定义数据库存储方式(枚举、常量)
+
+    /// 数据库存储方式
+    ///
+    /// - inMemory: 内存存储
+    /// - temporary: 临时存储
+    /// - uri: 路径创建数据库
     enum StorageMode: CustomStringConvertible{
         
         case inMemory
@@ -30,7 +37,13 @@ public final class JEasyORMDBConnection {
         }
     }
     
-    enum Operation {
+    /// 数据库操作
+    ///
+    /// - insert: 插入
+    /// - update: 更新
+    /// - delete: 删除
+    /// - select: 查询
+        enum Operation {
         
         case insert
         case update
@@ -52,8 +65,51 @@ public final class JEasyORMDBConnection {
                     fatalError("没有这个类型:\(value)")
             }
         }
-
+    }
+    //构建数据库链接
+    fileprivate var handler: OpaquePointer? = nil
+    //队列标记
+    fileprivate var queue = DispatchQueue(label: kQueueLabel)
+    fileprivate static var queueKey = DispatchSpecificKey<Int>()
+    fileprivate lazy var queueContext: Int = unsafeBitCast(self, to: Int.self)
+    
+    init(_ location:StorageMode = .inMemory,readly:Bool = false) throws {
+        
+        let flags = readly ? SQLITE_OPEN_READONLY : SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE
+        
+        
+        try check(sqlite3_open_v2(location.description, &handler, flags | SQLITE_OPEN_FULLMUTEX, nil))
+        //操作数据库时避免并发
+        queue.setSpecific(key: JEasyORMDBConnection.queueKey, value: queueContext)
         
     }
+    
+   convenience init(_ fileName: String, readly:Bool = false) throws {
+       try self.init(.uri(fileName), readly: readly)
+    }
+    
+   @discardableResult
+    func check(_ resultCode: Int32) throws -> Int32 {
+        guard let error = DBResult(code:resultCode,connection:self) else {
+            return resultCode;
+        }
+        throw error;
+    }
 
+}
+
+public enum DBResult: Error {
+    
+    private static let successCode = [SQLITE_OK,SQLITE_ROW,SQLITE_DONE];
+    
+    case error(message:String, code: Int32)
+    
+    init?(code: Int32, connection: JEasyORMDBConnection) {
+        guard !DBResult.successCode.contains(code) else {
+            return nil
+        }
+        
+        let  message = String(cString: sqlite3_errmsg(connection.handler))
+        self = .error(message: message, code: code)
+    }
 }
