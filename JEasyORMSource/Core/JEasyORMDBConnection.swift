@@ -115,7 +115,46 @@ public final class JEasyORMDBConnection {
         return Int(sqlite3_total_changes(handler))
     }
     
+    //MARK: SQL语句
+    public func execute(_ sql: String) throws {
+        
+        _ = try dbSync{
+            try self.check(sqlite3_exec(self.handler, sql, nil, nil,nil))
 
+        }
+    }
+    
+    public func dbSync<T>(_ callback:@escaping () throws -> T) rethrows -> T {
+        
+        var success: T?
+        var failure: Error?
+        
+        //临时代码块
+        let box: ()->Void = {
+            
+            do {
+                 success = try callback()
+            } catch {
+                failure = error
+            }
+        }
+        //当前队列
+        if DispatchQueue.getSpecific(key: JEasyORMDBConnection.queueKey)
+            == queueContext {
+            //当前队列 当前线程
+            box()
+        } else {
+           queue.sync(execute: box)
+        }
+        
+        //异常处理 抛出给客户端处理
+        if let fail = failure {
+            try {
+                throw fail
+            }()
+        }
+        return success!
+    }
 }
 
 public enum DBResult: Error {
