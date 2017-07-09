@@ -66,7 +66,7 @@ public final class JEasyORMDBConnection {
             }
         }
     }
-    //构建数据库链接
+    //MARK:构建数据库链接
     fileprivate var handler: OpaquePointer? = nil
     //队列标记
     fileprivate var queue = DispatchQueue(label: kQueueLabel)
@@ -87,7 +87,7 @@ public final class JEasyORMDBConnection {
    convenience init(_ fileName: String, readly:Bool = false) throws {
        try self.init(.uri(fileName), readly: readly)
     }
-    
+    //MARK:数据库异常处理
    @discardableResult
     func check(_ resultCode: Int32) throws -> Int32 {
         guard let error = DBResult(code:resultCode,connection:self) else {
@@ -95,6 +95,26 @@ public final class JEasyORMDBConnection {
         }
         throw error;
     }
+    
+    //MARK:检测数据库操作
+    //-- 数据库权限 
+    /*returns 1 if the database N
+    ** of connection D is read-only, 0 if it is read/write, or -1 if N is not
+    ** the name of a database on connection D
+    */
+    public var readonly: Bool {
+        return sqlite3_db_readonly(handler, nil) == 1
+    }
+    //--当前数据库插入最近一条数据的ID
+    public var changes: Int {
+        return Int(sqlite3_changes(handler))
+    }
+    
+    //--数据库打开到目前为止所受影响的行数
+    public var totalChanges: Int {
+        return Int(sqlite3_total_changes(handler))
+    }
+    
 
 }
 
