@@ -155,6 +155,21 @@ public final class JEasyORMDBConnection {
         }
         return success!
     }
+    //MARK: SQL语句执行
+    //可变参数
+    public func run(_ statement:String, _ bindings:Binding...) {
+        
+    }
+    //数组参数
+    public func run(_ statement:String, _ bindings:[Binding?]) {
+        
+    }
+    //字典参数
+    public func run(_ statement:String, _ bindings:[String: Binding?]) {
+        
+    }
+    
+    
 }
 
 public enum DBResult: Error {

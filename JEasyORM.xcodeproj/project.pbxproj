@@ -17,6 +17,8 @@
 		2E59EF801F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */; };
 		2E59EF811F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */; };
 		2E6C78D81F11E7B400702167 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6C78D71F11E7B400702167 /* libsqlite3.tbd */; };
+		2E7C7C4F1F13817200298747 /* JEasyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C7C4E1F13817200298747 /* JEasyType.swift */; };
+		2E7C7C501F13817200298747 /* JEasyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C7C4E1F13817200298747 /* JEasyType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		2E59EF701F0AA03300952A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyORMDBConnection.swift; sourceTree = "<group>"; };
 		2E6C78D71F11E7B400702167 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2E7C7C4E1F13817200298747 /* JEasyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */,
+				2E7C7C4E1F13817200298747 /* JEasyType.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7C7C4F1F13817200298747 /* JEasyType.swift in Sources */,
 				2E59EF511F0AA03300952A70 /* ViewController.swift in Sources */,
 				2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */,
 				2E59EF801F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */,
@@ -315,6 +320,7 @@
 			files = (
 				2E59EF641F0AA03300952A70 /* JEasyORMTests.swift in Sources */,
 				2E59EF811F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */,
+				2E7C7C501F13817200298747 /* JEasyType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
