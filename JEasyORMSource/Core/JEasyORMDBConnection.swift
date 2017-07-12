@@ -67,7 +67,7 @@ public final class JEasyORMDBConnection {
         }
     }
     //MARK:构建数据库链接
-    fileprivate var handler: OpaquePointer? = nil
+    internal var handler: OpaquePointer? = nil
     //队列标记
     fileprivate var queue = DispatchQueue(label: kQueueLabel)
     fileprivate static var queueKey = DispatchSpecificKey<Int>()
