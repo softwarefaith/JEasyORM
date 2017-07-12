@@ -156,18 +156,42 @@ public final class JEasyORMDBConnection {
         return success!
     }
     //MARK: SQL语句执行
-    //可变参数
-    public func run(_ statement:String, _ bindings:Binding...) {
-        
+    @discardableResult public func run(_ statement:String,_ bindings:Binding...) throws -> JEasyStatement {
+        return try self.run(statement, bindings)
     }
+    
     //数组参数
-    public func run(_ statement:String, _ bindings:[Binding?]) {
-        
+    @discardableResult public func run(_ statement:String,_ bindings:[Binding?]) throws -> JEasyStatement {
+        //构建SQL
+        return try self.prepare(statement).run(bindings)
     }
+    
     //字典参数
-    public func run(_ statement:String, _ bindings:[String: Binding?]) {
-        
+    @discardableResult public func run(_ statement:String,_ bindings:[String:Binding?]) throws -> JEasyStatement {
+        //先去->构建SQL(绑定值)->执行SQL
+        return try self.prepare(statement).run(bindings)
     }
+    
+    
+    //绑定参数
+    //一种是可变参数
+    public func prepare(_ statement:String,_ bindings:Binding?...) throws -> JEasyStatement {
+        if !bindings.isEmpty {
+            return try self.prepare(statement, bindings)
+        }
+        return try JEasyStatement(self, statement)
+    }
+    
+    //一种是数组参数
+    public func prepare(_ statement:String,_ bindings:[Binding?]) throws -> JEasyStatement {
+        return try self.prepare(statement).bind(bindings)
+    }
+    
+    //一种是字典参数
+    public func prepare(_ statement:String,_ bindings:[String:Binding?]) throws -> JEasyStatement {
+        return try self.prepare(statement).bind(bindings)
+    }
+
     
     
 }
