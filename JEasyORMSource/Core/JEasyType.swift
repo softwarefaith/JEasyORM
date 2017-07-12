@@ -22,27 +22,128 @@ public protocol Value: Binding {
     associatedtype ValueType = Self
     
     //数据库表字段名称
-    static var decareDataType: String {get}
+    static var declareDatatype: String {get}
     //将程序中数据类型 ->  数据库类型
-    static func fromDataTypeValue(_ dataTypeValue:DataType) ->ValueType
+    static func fromDatatypeValue(_ datatypeValue:DataType) ->ValueType
     
     //当前返回值类型
-    var dataTypeValue: DataType {get}
+    var datatypeValue: DataType {get}
     
 }
 
-//MARK: 数字类型
-extension Int: Number {
+///Double类型
+//数据库里面：程序中Double类型->REAL类型
+extension Double : Number, Value {
+    
+    //程序中Double类型->REAL类型
+    public static var declareDatatype: String {
+        return "REAL"
+    }
+    
+    public static func fromDatatypeValue(_ datatypeValue: Double) -> Double {
+        return datatypeValue
+    }
+    
+    public var datatypeValue: Double {
+        //返回值
+        return self
+    }
     
 }
 
-extension Double: Number {
+extension Float : Number, Value {
+    //程序中Float类型->REAL类型
+    public static var declareDatatype = "REAL"
+    
+    public static func fromDatatypeValue(_ datatypeValue: Float) -> Float {
+        return datatypeValue
+    }
+    
+    public var datatypeValue: Float {
+        //返回值
+        return self
+    }
     
 }
 
-extension Float: Number {
+//Int类型
+//数据库里面：程序中整形类型->integer类型
+extension Int : Number , Value {
+    //程序中Int类型->INTEGER类型
+    public static var declareDatatype = "INTEGER"
     
+    public static func fromDatatypeValue(_ datatypeValue: Int) -> Int {
+        return datatypeValue
+    }
+    
+    public var datatypeValue: Int {
+        //返回值
+        return self
+    }
 }
 
-//MARK: 值类型
+//Int32位类型
+extension Int32 : Number , Value {
+    //程序中Int32类型->INTEGER类型
+    public static var declareDatatype = "INTEGER"
+    
+    public static func fromDatatypeValue(_ datatypeValue: Int32) -> Int32 {
+        return datatypeValue
+    }
+    
+    public var datatypeValue: Int32 {
+        //返回值
+        return self
+    }
+}
+
+//Int64位类型
+extension Int64 : Number , Value {
+    //程序中Int64类型->INTEGER类型
+    public static var declareDatatype = "INTEGER"
+    
+    public static func fromDatatypeValue(_ datatypeValue: Int64) -> Int64 {
+        return datatypeValue
+    }
+    
+    public var datatypeValue: Int64 {
+        //返回值
+        return self
+    }
+}
+
+//以此类推...
+
+
+//例如：String(字符串、Bool类型等等...)，自己扩展
+
+extension String : Binding , Value {
+    //程序中Int64类型->TEXT类型
+    public static var declareDatatype = "TEXT"
+    
+    public static func fromDatatypeValue(_ datatypeValue: String) -> String {
+        return datatypeValue
+    }
+    
+    public var datatypeValue: String {
+        //返回值
+        return self
+    }
+}
+
+
+extension Bool : Binding , Value {
+    //程序中Int64类型->TEXT类型(0和1)
+    public static var declareDatatype = Int.declareDatatype
+    
+    public static func fromDatatypeValue(_ datatypeValue: Int) -> Bool {
+        return datatypeValue != 0
+    }
+    
+    public var datatypeValue: Int {
+        //返回值
+        return self ? 1 : 0
+    }
+}
+
 
