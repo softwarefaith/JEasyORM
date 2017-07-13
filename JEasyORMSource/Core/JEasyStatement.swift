@@ -11,7 +11,7 @@ import Foundation
 //sqlite3_destructor_type解释
 //SQLITE_STATIC(0):表指针对应的内容恒定不变的(表数据不可修改->可以这理解)
 let SQLITE_STATIC = unsafeBitCast(0, to: sqlite3_destructor_type.self)
-//SQLITE_TRANSIENT(1):表示数据库可以读写，随时随刻石可以改变的
+//SQLITE_TRANSIENT(1):表示数据库可以读写，随时随刻可以改变的
 let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
 
 public final class JEasyStatement {
@@ -50,7 +50,7 @@ public final class JEasyStatement {
         return self.bind(values)
     }
     
-    //一种是数组参数
+    //一种是数组参数  顺序
     public func bind(_ values:[Binding?]) -> JEasyStatement {
         if values.isEmpty {
             return self
