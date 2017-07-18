@@ -21,6 +21,7 @@
 		2E7C7C501F13817200298747 /* JEasyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C7C4E1F13817200298747 /* JEasyType.swift */; };
 		2EA9BE1A1F1676CD00AB6C73 /* JEasyStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA9BE191F1676CD00AB6C73 /* JEasyStatement.swift */; };
 		2EA9BE1B1F1676CD00AB6C73 /* JEasyStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA9BE191F1676CD00AB6C73 /* JEasyStatement.swift */; };
+		2EC657C61F1DE5A600BFCC25 /* test.db in Resources */ = {isa = PBXBuildFile; fileRef = 2EC657C51F1DE5A600BFCC25 /* test.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		2E6C78D71F11E7B400702167 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2E7C7C4E1F13817200298747 /* JEasyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyType.swift; sourceTree = "<group>"; };
 		2EA9BE191F1676CD00AB6C73 /* JEasyStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyStatement.swift; sourceTree = "<group>"; };
+		2EC657C51F1DE5A600BFCC25 /* test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */,
 				2E59EF501F0AA03300952A70 /* ViewController.swift */,
+				2EC657C51F1DE5A600BFCC25 /* test.db */,
 				2E59EF521F0AA03300952A70 /* Main.storyboard */,
 				2E59EF551F0AA03300952A70 /* Assets.xcassets */,
 				2E59EF571F0AA03300952A70 /* LaunchScreen.storyboard */,
@@ -287,6 +290,7 @@
 				2E59EF591F0AA03300952A70 /* LaunchScreen.storyboard in Resources */,
 				2E59EF561F0AA03300952A70 /* Assets.xcassets in Resources */,
 				2E59EF541F0AA03300952A70 /* Main.storyboard in Resources */,
+				2EC657C61F1DE5A600BFCC25 /* test.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

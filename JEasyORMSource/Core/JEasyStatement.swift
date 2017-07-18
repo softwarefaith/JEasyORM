@@ -84,7 +84,7 @@ public final class JEasyStatement {
         return self
     }
     
-    //MARK:执行SQL语句
+    //MARK:执行SQL语句：先构建 -> 执行
     //一种是可变参数
     public func run(_ bindings:Binding?...) throws -> JEasyStatement{
         guard bindings.isEmpty else {
