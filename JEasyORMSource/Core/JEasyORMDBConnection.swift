@@ -175,7 +175,7 @@ public final class JEasyORMDBConnection {
     
     //绑定参数
     //一种是可变参数
-    public func prepare(_ statement:String,_ bindings:Binding?...) throws -> JEasyStatement {
+    private func prepare(_ statement:String,_ bindings:Binding?...) throws -> JEasyStatement {
         if !bindings.isEmpty {
             return try self.prepare(statement, bindings)
         }
@@ -183,12 +183,12 @@ public final class JEasyORMDBConnection {
     }
     
     //一种是数组参数
-    public func prepare(_ statement:String,_ bindings:[Binding?]) throws -> JEasyStatement {
+    private func prepare(_ statement:String,_ bindings:[Binding?]) throws -> JEasyStatement {
         return try self.prepare(statement).bind(bindings)
     }
     
     //一种是字典参数
-    public func prepare(_ statement:String,_ bindings:[String:Binding?]) throws -> JEasyStatement {
+    private func prepare(_ statement:String,_ bindings:[String:Binding?]) throws -> JEasyStatement {
         return try self.prepare(statement).bind(bindings)
     }
 

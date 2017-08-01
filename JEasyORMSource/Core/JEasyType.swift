@@ -15,7 +15,7 @@ public protocol Number: Binding {
     
 }
 //保存数据库字段名称以及类型 -> 程序中的属性名称和值以及类型
-public protocol Value: Binding {
+public protocol Value: Binding,Expressible{
     //程序当中的数据类型
     associatedtype DataType: Binding
     //程序返回值类型(可能需要转换)
