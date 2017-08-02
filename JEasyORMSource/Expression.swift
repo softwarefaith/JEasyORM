@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import Foundation
 
+//祖宗类->爷爷类
 //高度抽象表达式(可表示)
 //操作类型（创建表、查询表、删除表等等...）
 //字段类型（表字段）
@@ -16,8 +16,8 @@ import Foundation
 public protocol Expressible {
     
     //以下expression:就是一个SQL语句
-    //合并表达式用的
-    //(高度抽象为一个表达式)->SQL语句->将对象expression进行遍历，然后构建SQL语句
+    //合并表达式用的(后面详解)
+    //伏笔(高度抽象为一个表达式)->SQL语句->将对象expression进行遍历，然后构建SQL语句
     var expression:Expression<Void> { get }
     
 }
@@ -48,6 +48,7 @@ extension Expressible {
     
 }
 
+//父亲类->爸爸类
 //具体抽象字段表达式
 //这个协议：定义了字段表达式抽象
 public protocol ExpressionType : Expressible{
@@ -89,6 +90,12 @@ extension ExpressionType {
         self.init(literal: indentifer.quote())
     }
     
+    
+    //写法三：添加构造方法->传递对象
+    public init<E : ExpressionType>(_ expression: E){
+        self.init(expression.template, expression.bindings)
+    }
+    
 }
 
 //扩展：字段类型
@@ -99,7 +106,7 @@ extension ExpressionType {
 }
 
 
-//结构体->字段表达式类型实现类
+//儿子类->结构体->字段表达式类型实现类
 public struct Expression<Datatype> : ExpressionType {
     //指定具体的数据类型
     public typealias UnderlyingType = Datatype
@@ -118,9 +125,9 @@ public struct Expression<Datatype> : ExpressionType {
 
 
 
-//Expressible可以是一种可选类型，也就是说 = nil
+//让我们Expressible可以是一种可选类型，也就是说 = nil
 //扩展功能:表字段允许为空
-//处理字段类型->表达式
+//重点：处理字段类型->表达式
 //可选类型协议(自定类型)
 public protocol OptionalType{
     //泛型
@@ -145,10 +152,10 @@ extension ExpressionType where UnderlyingType : Value {
 }
 
 //约束二:可选类型
-//约束框架锁能够支持类型(其他不支持类型，不允许传递)
+//说白了：约束的是我们框架锁能够支持类型(其他不支持类型，不允许传递)
 extension ExpressionType where UnderlyingType : OptionalType, UnderlyingType.WrappedType : Value {
     
-    //插入数据用到
+    //后面插入数据用到
     //为空(传递空值)
     //插入数据：插入null
     public static var null: Self {
@@ -170,4 +177,11 @@ extension Value {
     }
     
 }
+
+
+
+
+
+
+
 

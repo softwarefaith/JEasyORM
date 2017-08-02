@@ -19,7 +19,7 @@ class ViewController: UIViewController {
             let path = Bundle.main.path(forResource: "test", ofType: ".db")
             print(path!)
             //数据库连接:DBConnection
-            let connection = try JEasyORMDBConnection(path!)
+            let connection = try DBConnection(path!)
             print(connection.readonly)
             
             //直接执行SQL

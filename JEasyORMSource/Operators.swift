@@ -1,9 +1,9 @@
 //
 //  Operators.swift
-//  Dream_Architect_SQLiteFramework
+//  JEasyORM
 //
-//  Created by Dream on 2017/7/3.
-//  Copyright © 2017年 Tz. All rights reserved.
+//  Created by 蔡杰 on 2017/7/31.
+//  Copyright © 2017年 蔡杰. All rights reserved.
 //
 
 /*********"&&"重载运算符操作**start**********/

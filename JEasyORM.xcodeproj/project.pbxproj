@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E277DB01F31B4C00089C893 /* Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DAB1F31B4C00089C893 /* Insert.swift */; };
+		2E277DB11F31B4C00089C893 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DAC1F31B4C00089C893 /* Setter.swift */; };
+		2E277DB21F31B4C00089C893 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DAD1F31B4C00089C893 /* Delete.swift */; };
+		2E277DB31F31B4C00089C893 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DAE1F31B4C00089C893 /* Update.swift */; };
+		2E277DB41F31B4C00089C893 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DAF1F31B4C00089C893 /* Filter.swift */; };
+		2E277DB81F31B4F90089C893 /* DBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DB51F31B4F90089C893 /* DBConnection.swift */; };
+		2E277DB91F31B4F90089C893 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DB61F31B4F90089C893 /* Value.swift */; };
+		2E277DBA1F31B4F90089C893 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DB71F31B4F90089C893 /* Statement.swift */; };
+		2E277DBC1F31B58F0089C893 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DBB1F31B58E0089C893 /* Operators.swift */; };
+		2E277DBE1F31B5EB0089C893 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DBD1F31B5EB0089C893 /* Helpers.swift */; };
+		2E277DC01F31BA2F0089C893 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DBF1F31BA2F0089C893 /* Expression.swift */; };
 		2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */; };
 		2E59EF511F0AA03300952A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF501F0AA03300952A70 /* ViewController.swift */; };
 		2E59EF541F0AA03300952A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E59EF521F0AA03300952A70 /* Main.storyboard */; };
@@ -14,15 +25,7 @@
 		2E59EF591F0AA03300952A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E59EF571F0AA03300952A70 /* LaunchScreen.storyboard */; };
 		2E59EF641F0AA03300952A70 /* JEasyORMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF631F0AA03300952A70 /* JEasyORMTests.swift */; };
 		2E59EF6F1F0AA03300952A70 /* JEasyORMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF6E1F0AA03300952A70 /* JEasyORMUITests.swift */; };
-		2E59EF801F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */; };
-		2E59EF811F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */; };
 		2E6C78D81F11E7B400702167 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6C78D71F11E7B400702167 /* libsqlite3.tbd */; };
-		2E7C7C4F1F13817200298747 /* JEasyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C7C4E1F13817200298747 /* JEasyType.swift */; };
-		2E7C7C501F13817200298747 /* JEasyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C7C4E1F13817200298747 /* JEasyType.swift */; };
-		2EA9BE1A1F1676CD00AB6C73 /* JEasyStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA9BE191F1676CD00AB6C73 /* JEasyStatement.swift */; };
-		2EA9BE1B1F1676CD00AB6C73 /* JEasyStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA9BE191F1676CD00AB6C73 /* JEasyStatement.swift */; };
-		2EB5DA201F2F124100F44BB1 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5DA1F1F2F124100F44BB1 /* Expression.swift */; };
-		2EB5DA231F2F12C700F44BB1 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5DA221F2F12C700F44BB1 /* Helpers.swift */; };
 		2EB5DA261F2F134500F44BB1 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5DA241F2F134500F44BB1 /* Query.swift */; };
 		2EB5DA271F2F134500F44BB1 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5DA251F2F134500F44BB1 /* Schema.swift */; };
 		2EC657C61F1DE5A600BFCC25 /* test.db in Resources */ = {isa = PBXBuildFile; fileRef = 2EC657C51F1DE5A600BFCC25 /* test.db */; };
@@ -48,6 +51,17 @@
 /* Begin PBXFileReference section */
 		2E162DB71F0B74A60092126B /* JEasyBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JEasyBridge.h; sourceTree = "<group>"; };
 		2E162DB91F0B74C60092126B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		2E277DAB1F31B4C00089C893 /* Insert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insert.swift; sourceTree = "<group>"; };
+		2E277DAC1F31B4C00089C893 /* Setter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setter.swift; sourceTree = "<group>"; };
+		2E277DAD1F31B4C00089C893 /* Delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
+		2E277DAE1F31B4C00089C893 /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		2E277DAF1F31B4C00089C893 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		2E277DB51F31B4F90089C893 /* DBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBConnection.swift; sourceTree = "<group>"; };
+		2E277DB61F31B4F90089C893 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		2E277DB71F31B4F90089C893 /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		2E277DBB1F31B58E0089C893 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		2E277DBD1F31B5EB0089C893 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		2E277DBF1F31BA2F0089C893 /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		2E59EF4B1F0AA03300952A70 /* JEasyORM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JEasyORM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E59EF4E1F0AA03300952A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E59EF501F0AA03300952A70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,12 +75,7 @@
 		2E59EF6A1F0AA03300952A70 /* JEasyORMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JEasyORMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E59EF6E1F0AA03300952A70 /* JEasyORMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEasyORMUITests.swift; sourceTree = "<group>"; };
 		2E59EF701F0AA03300952A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyORMDBConnection.swift; sourceTree = "<group>"; };
 		2E6C78D71F11E7B400702167 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		2E7C7C4E1F13817200298747 /* JEasyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyType.swift; sourceTree = "<group>"; };
-		2EA9BE191F1676CD00AB6C73 /* JEasyStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEasyStatement.swift; sourceTree = "<group>"; };
-		2EB5DA1F1F2F124100F44BB1 /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Types/Expression.swift; sourceTree = "<group>"; };
-		2EB5DA221F2F12C700F44BB1 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		2EB5DA241F2F134500F44BB1 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		2EB5DA251F2F134500F44BB1 /* Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		2EC657C51F1DE5A600BFCC25 /* test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.db; sourceTree = "<group>"; };
@@ -175,9 +184,9 @@
 		2E59EF7D1F0AA06F00952A70 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				2E59EF7F1F0AA0B800952A70 /* JEasyORMDBConnection.swift */,
-				2E7C7C4E1F13817200298747 /* JEasyType.swift */,
-				2EA9BE191F1676CD00AB6C73 /* JEasyStatement.swift */,
+				2E277DB51F31B4F90089C893 /* DBConnection.swift */,
+				2E277DB61F31B4F90089C893 /* Value.swift */,
+				2E277DB71F31B4F90089C893 /* Statement.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -185,7 +194,7 @@
 		2E59EF7E1F0AA06F00952A70 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				2EB5DA221F2F12C700F44BB1 /* Helpers.swift */,
+				2E277DBD1F31B5EB0089C893 /* Helpers.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -193,9 +202,15 @@
 		2EB5DA211F2F124600F44BB1 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				2EB5DA1F1F2F124100F44BB1 /* Expression.swift */,
+				2E277DBB1F31B58E0089C893 /* Operators.swift */,
 				2EB5DA241F2F134500F44BB1 /* Query.swift */,
+				2E277DBF1F31BA2F0089C893 /* Expression.swift */,
 				2EB5DA251F2F134500F44BB1 /* Schema.swift */,
+				2E277DAB1F31B4C00089C893 /* Insert.swift */,
+				2E277DAC1F31B4C00089C893 /* Setter.swift */,
+				2E277DAD1F31B4C00089C893 /* Delete.swift */,
+				2E277DAE1F31B4C00089C893 /* Update.swift */,
+				2E277DAF1F31B4C00089C893 /* Filter.swift */,
 			);
 			name = Types;
 			sourceTree = "<group>";
@@ -335,15 +350,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E277DB01F31B4C00089C893 /* Insert.swift in Sources */,
 				2EB5DA271F2F134500F44BB1 /* Schema.swift in Sources */,
-				2E7C7C4F1F13817200298747 /* JEasyType.swift in Sources */,
-				2EB5DA231F2F12C700F44BB1 /* Helpers.swift in Sources */,
+				2E277DB91F31B4F90089C893 /* Value.swift in Sources */,
 				2E59EF511F0AA03300952A70 /* ViewController.swift in Sources */,
 				2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */,
+				2E277DB21F31B4C00089C893 /* Delete.swift in Sources */,
+				2E277DB41F31B4C00089C893 /* Filter.swift in Sources */,
 				2EB5DA261F2F134500F44BB1 /* Query.swift in Sources */,
-				2EA9BE1A1F1676CD00AB6C73 /* JEasyStatement.swift in Sources */,
-				2E59EF801F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */,
-				2EB5DA201F2F124100F44BB1 /* Expression.swift in Sources */,
+				2E277DB81F31B4F90089C893 /* DBConnection.swift in Sources */,
+				2E277DBA1F31B4F90089C893 /* Statement.swift in Sources */,
+				2E277DBC1F31B58F0089C893 /* Operators.swift in Sources */,
+				2E277DB31F31B4C00089C893 /* Update.swift in Sources */,
+				2E277DB11F31B4C00089C893 /* Setter.swift in Sources */,
+				2E277DBE1F31B5EB0089C893 /* Helpers.swift in Sources */,
+				2E277DC01F31BA2F0089C893 /* Expression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,10 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EA9BE1B1F1676CD00AB6C73 /* JEasyStatement.swift in Sources */,
 				2E59EF641F0AA03300952A70 /* JEasyORMTests.swift in Sources */,
-				2E59EF811F0AA0B800952A70 /* JEasyORMDBConnection.swift in Sources */,
-				2E7C7C501F13817200298747 /* JEasyType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

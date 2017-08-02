@@ -1,9 +1,9 @@
 //
 //  Value.swift
-//  Dream_20170626_Architect_DatabaseFramework
+//  JEasyORM
 //
-//  Created by Dream on 2017/6/28.
-//  Copyright © 2017年 Tz. All rights reserved.
+//  Created by 蔡杰 on 2017/7/31.
+//  Copyright © 2017年 蔡杰. All rights reserved.
 //
 
 //绑定类型(参数类型)

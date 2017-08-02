@@ -1,9 +1,9 @@
 //
 //  Helpers.swift
-//  Dream_Architect_SQLiteFramework
+//  JEasyORM
 //
-//  Created by Dream on 2017/6/29.
-//  Copyright © 2017年 Tz. All rights reserved.
+//  Created by 蔡杰 on 2017/7/31.
+//  Copyright © 2017年 蔡杰. All rights reserved.
 //
 
 
