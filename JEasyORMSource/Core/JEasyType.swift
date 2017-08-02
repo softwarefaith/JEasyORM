@@ -14,16 +14,20 @@ public protocol Binding {
 public protocol Number: Binding {
     
 }
-//保存数据库字段名称以及类型 -> 程序中的属性名称和值以及类型
+//值类型 : Value类型
+//特点一：保存了数据库表字段名称和类型->对应->程序当中属性名称和值以及类型
+//特点二：并不知道具体是什么类型，然后它又要规定类型->泛型
 public protocol Value: Binding,Expressible{
-    //程序当中的数据类型
+    //泛型一：数据类型：程序当中数据类型(Int、Double、Float、String)
     associatedtype DataType: Binding
-    //程序返回值类型(可能需要转换)
+    //泛型二：返回值类型：程序当中返回值类型(有可能要进行类型转换)
     associatedtype ValueType = Self
     
-    //数据库表字段名称
+    //作用：数据库表字段名称和表字段类型
+    
+    //属性：数据库表字段名称
     static var declareDatatype: String {get}
-    //将程序中数据类型 ->  数据库类型
+     //方法：将程序中数据类型->转成->数据库类型
     static func fromDatatypeValue(_ datatypeValue:DataType) ->ValueType
     
     //当前返回值类型

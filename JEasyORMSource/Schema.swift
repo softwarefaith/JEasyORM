@@ -46,6 +46,18 @@ extension Table {
         return " ".join(expression.flatMap{ $0 }).asSQL()
     }
     
+    //删除表操作
+    public func drop(_ identifer: String, _ name: Expressible) -> Expressible {
+        let expressionArray:[Expressible?] = [
+            Expression<Void>(literal: "DROP \(identifer)"),
+            name
+        ]
+        //第一个表达式：DROP TABLE
+        //第二个表达式：t_user
+        //组装: DROP TABLE t_user
+        return " ".join(expressionArray.flatMap{$0})
+    }
+    
 }
 
 
@@ -68,7 +80,7 @@ public final class TableBuilder {
     //参数二：表示字段是否唯一
     //参数三：字段默认值->表达式类型->V类型->Int、Double、Float、String等...
     @discardableResult public func column<V : Value>(_ name: Expression<V>, unique: Bool = false, defaultValue: V) -> TableBuilder {
-        return self.column(name, V.declareDatatype, unique: unique, defaultValue: defaultValue as? Expressible)
+        return self.column(name, V.declareDatatype, unique: unique, defaultValue: defaultValue as Expressible)
     }
     
     //方法重载三:实现
@@ -77,9 +89,6 @@ public final class TableBuilder {
         self.expressions.append(expressionFunc(name,datatype,false,unique: unique, defaultValue: defaultValue))
         return self
     }
-    
-    //童鞋们课后可以重载更多的方法
-    
     
     private func expressionFunc(_ column: Expressible,_ datatype: String,_ null:Bool, unique: Bool = false, defaultValue: Expressible?) -> Expressible {
         //数据库字段唯一
