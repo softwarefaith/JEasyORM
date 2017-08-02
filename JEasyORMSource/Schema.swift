@@ -23,6 +23,17 @@ extension QueryType {
         return " ".join(expressionArray.flatMap{$0})
     }
     
+    //删除表操作
+    public func drop(_ identifer: String, _ name: Expressible) -> Expressible {
+        let expressionArray:[Expressible?] = [
+            Expression<Void>(literal: "DROP \(identifer)"),
+            name
+        ]
+        //第一个表达式：DROP TABLE
+        //第二个表达式：t_user
+        //组装: DROP TABLE t_user
+        return " ".join(expressionArray.flatMap{$0})
+    }
 }
 
 
@@ -46,16 +57,9 @@ extension Table {
         return " ".join(expression.flatMap{ $0 }).asSQL()
     }
     
-    //删除表操作
-    public func drop(_ identifer: String, _ name: Expressible) -> Expressible {
-        let expressionArray:[Expressible?] = [
-            Expression<Void>(literal: "DROP \(identifer)"),
-            name
-        ]
-        //第一个表达式：DROP TABLE
-        //第二个表达式：t_user
-        //组装: DROP TABLE t_user
-        return " ".join(expressionArray.flatMap{$0})
+    //删除表
+    public func drop() -> String{
+        return self.drop(Table.identifier, tableName()).asSQL()
     }
     
 }
