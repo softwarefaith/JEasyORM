@@ -24,6 +24,11 @@ public final class Statement {
     fileprivate let connection : DBConnection
     //数据库表指针
     fileprivate var handle : OpaquePointer? = nil
+    //获取表字段数量
+    public lazy var columnCount:Int = Int(sqlite3_column_count(self.handle))
+    
+    //定义一个容器
+    public lazy var row:Cursor = Cursor(self)
 
     //第一步：实现构造方法
     init(_ connection: DBConnection,_ SQL: String) throws {
@@ -181,6 +186,7 @@ public final class Statement {
 }
 
 
+
 extension Statement : CustomStringConvertible {
     
     public var description: String {
@@ -188,6 +194,88 @@ extension Statement : CustomStringConvertible {
     }
     
 }
+
+//角色二：具体迭代器->Statement
+extension Statement : IteratorProtocol {
+    
+    public func next() -> [Binding?]? {
+        return try! step() ? Array(row) : nil
+    }
+    
+}
+
+
+
+//具体容器
+public struct Cursor {
+    
+    //实现具体的容器
+    //持有数据库表指针
+    fileprivate let handle: OpaquePointer
+    //表字段数量
+    fileprivate let columnCount: Int
+    
+    fileprivate init(_ statement: Statement){
+        self.handle = statement.handle!
+        self.columnCount = statement.columnCount
+    }
+    
+    //获取字段值:下标语法
+    public subscript(index: Int) -> Double {
+        return sqlite3_column_double(handle, Int32(index))
+    }
+    
+    public subscript(index: Int) -> Float {
+        return Float(sqlite3_column_double(handle, Int32(index)))
+    }
+    
+    public subscript(index: Int) -> String {
+        return String(cString: sqlite3_column_text(handle, Int32(index)))
+    }
+    
+    public subscript(index: Int) -> Int {
+        return Int(sqlite3_column_int(handle, Int32(index)))
+    }
+    
+    public subscript(index: Int) -> Bool {
+        return Bool.fromDatatypeValue(self[index])
+    }
+    
+    public subscript(index: Int) -> Binding? {
+        switch sqlite3_column_type(handle, Int32(index)){
+        case SQLITE_FLOAT:
+            return self[index] as Double
+        case SQLITE_INTEGER:
+            return self[index] as Int
+        case SQLITE_NULL:
+            return nil
+        case SQLITE_TEXT:
+            return self[index] as String
+        case let type:
+            fatalError("没有这个类型: \(type)")
+        }
+    }
+    
+}
+
+extension Cursor : Sequence {
+    
+    public func makeIterator() -> AnyIterator<Binding?> {
+        //返回一个迭代器->自定义迭代器
+        var index = 0
+        return AnyIterator {
+            if index >= self.columnCount {
+                //没有数据，不需要遍历，遍历循环结束
+                return Optional<Binding?>.none
+            } else {
+                index += 1
+                return self[index - 1]
+            }
+        }
+    }
+    
+}
+
 
 
 

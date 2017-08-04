@@ -23,6 +23,19 @@ public struct QueryManager {
     
     //过滤器(where条件)->统一调用->是否需要条件
     var filters:Expression<Bool?>?
+    
+    //添加查询操作
+    //默认约束条件
+    //元素一：查询数据去重复
+    //例如
+    //数据一：id = 1   name = "Dream"
+    //数据二：id = 2   name = "Dream"
+    //去除重复(关键字：distinct)->根据字段进行去除重复
+    //结果
+    //数据一：id = 1   name = "Dream"
+    //元素二：需要查询的字段(默认查询所有的字段)
+    //select * from t_user
+    var select = (distinct: false,columns: [Expression<Void>(literal: "*") as Expressible])
 
 }
 
@@ -42,13 +55,6 @@ public protocol QueryType : Expressible {
 //提供默认实现
 extension QueryType {
     
-    public var expression: Expression<Void> {
-        let manager = [Expressible?]()
-        //过滤器
-        //Expression : name   sex
-        //加入", "结果: name, sex
-        return ", ".join(manager.flatMap{ $0 }).expression
-    }
     
     //包装数据库表名
     func tableName() -> Expressible {
@@ -67,6 +73,27 @@ extension QueryType {
         //目的：[数据库名称].[表名]
         return ".".join([Expression<Void>(database),name])
     }
+    
+    //添加具体的查询语句
+    fileprivate var selectStatement: Expressible {
+        return " ".join([
+            Expression<Void>(literal: manager.select.distinct ? "SELECT DISTINCT" : "SELECT"),
+            ", ".join(manager.select.columns),
+            Expression<Void>(literal: "FROM"),
+            tableName()
+            ])
+    }
+    public var expression: Expression<Void> {
+        let manager: [Expressible?] = [
+            //添加查询语句
+            selectStatement
+        ]
+        //过滤器
+        //Expression : name   sex
+        //加入", "结果: name, sex
+        return ", ".join(manager.flatMap{ $0 }).expression
+    }
+
     
 }
 

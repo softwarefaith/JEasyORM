@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E04F76D1F34407600176FB5 /* Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04F76C1F34407600176FB5 /* Select.swift */; };
 		2E277DB01F31B4C00089C893 /* Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DAB1F31B4C00089C893 /* Insert.swift */; };
 		2E277DB11F31B4C00089C893 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DAC1F31B4C00089C893 /* Setter.swift */; };
 		2E277DB21F31B4C00089C893 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E277DAD1F31B4C00089C893 /* Delete.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E04F76C1F34407600176FB5 /* Select.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
 		2E162DB71F0B74A60092126B /* JEasyBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JEasyBridge.h; sourceTree = "<group>"; };
 		2E162DB91F0B74C60092126B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2E277DAB1F31B4C00089C893 /* Insert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insert.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				2E277DAD1F31B4C00089C893 /* Delete.swift */,
 				2E277DAE1F31B4C00089C893 /* Update.swift */,
 				2E277DAF1F31B4C00089C893 /* Filter.swift */,
+				2E04F76C1F34407600176FB5 /* Select.swift */,
 			);
 			name = Types;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */,
 				2E277DB21F31B4C00089C893 /* Delete.swift in Sources */,
 				2E277DB41F31B4C00089C893 /* Filter.swift in Sources */,
+				2E04F76D1F34407600176FB5 /* Select.swift in Sources */,
 				2EB5DA261F2F134500F44BB1 /* Query.swift in Sources */,
 				2E277DB81F31B4F90089C893 /* DBConnection.swift in Sources */,
 				2E277DBA1F31B4F90089C893 /* Statement.swift in Sources */,
