@@ -18,7 +18,7 @@ let SQLITE_STATIC = unsafeBitCast(0, to: sqlite3_destructor_type.self)
 let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
 
 
-//SQL语句：参数绑定(太监类)
+//SQL语句：参数绑定
 public final class Statement {
     
     fileprivate let connection : DBConnection
@@ -29,6 +29,18 @@ public final class Statement {
     
     //定义一个容器
     public lazy var row:Cursor = Cursor(self)
+    
+    //获取数据库表字段
+    //(0,1,2,3,4)
+    //例如: id、name、sex
+    // id -> index = 0
+    // name -> index = 1
+    // sex -> index = 2
+    //按照顺序获取数据库字段
+    public lazy var columnNames:[String] = (0..<Int32(self.columnCount)).map {
+        String(cString: sqlite3_column_name(self.handle, $0))
+    }
+    
 
     //第一步：实现构造方法
     init(_ connection: DBConnection,_ SQL: String) throws {
@@ -38,7 +50,7 @@ public final class Statement {
         //参数一：数据库指针
         //参数二：SQL语句
         //参数三：SQL语句长度（自动检测长度，读取第一个结束符执行SQL）
-        //自己研究
+        
         //例如：sql = "insert into t_user(t_user_sex,t_user_name) values(?,?); insert into t_teacher(t_teacher_sex,t_teacher_name) values(?,?);"
         //参数四：数据库表指针
         //参数五：SQL语句可能存在多个结束符，指定剩下的没有执行编译SQL

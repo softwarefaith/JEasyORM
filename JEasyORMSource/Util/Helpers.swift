@@ -69,3 +69,20 @@ func transcode(_ literal: Binding?) -> String {
     }
 }
 
+func wrap<T>(_ expression: Expressible, function: String = #function) -> Expression<T> {
+    return function.wrap(expression)
+}
+
+func wrap<T>(_ expressions: [Expressible], function: String = #function) -> Expression<T> {
+    return function.wrap(", ".join(expressions))
+}
+
+func value<A: Value>(_ v: Binding) -> A {
+    return A.fromDatatypeValue(v as! A.DataType) as! A
+}
+
+func value<A: Value>(_ v: Binding?) -> A {
+    return value(v!)
+}
+
+

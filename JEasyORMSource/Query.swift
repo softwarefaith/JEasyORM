@@ -17,7 +17,7 @@ public struct QueryManager {
     //创建表操作(元组)
     var from: (name:String, database: String?)
     //TODO:查询、删除、插入....
-    fileprivate init(_ name:String, _ database: String?) {
+     init(_ name:String, _ database: String?) {
         self.from = (name,database)
     }
     
@@ -36,6 +36,14 @@ public struct QueryManager {
     //元素二：需要查询的字段(默认查询所有的字段)
     //select * from t_user
     var select = (distinct: false,columns: [Expression<Void>(literal: "*") as Expressible])
+    
+    //添加排序
+    var order = [Expressible]()
+    
+    //获取数量(元组)
+    var limit:(length: Int, offset: Int?)?
+    
+    
 
 }
 

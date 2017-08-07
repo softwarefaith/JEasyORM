@@ -44,6 +44,71 @@ extension DBConnection {
         }
     }
     
+    //select * from t_user;
+    //查询所有:不需要指定查询字段->为了和之前的根据字段查询方法分开实现
+    public func prepareAll(_ query: QueryType) throws ->AnySequence<Row> {
+        //构建SQL语句->对象(expression)
+        let expression = query.expression
+        //expression->String类型
+        //select * from t_user
+        let statement = try prepare(expression.template, expression.bindings)
+        
+        //指定这个SQL语句查询字段
+        let columnNames: [String:Int] = try {
+            var (columnNames, index) = ([String:Int](),0)
+            //循环遍历查询字段
+            for each in query.manager.select.columns {
+                
+                //获取所有字段名称
+                //解析字段(db.id,db.name)
+                //select db_test.t_user.* from t_user
+                var names = each.expression.template.characters.split { $0 == "." }.map( String.init )
+                let column = names.removeLast();
+                
+                //定义闭包代码块
+                let expandGlob = { (query: QueryType) throws -> (Void) in
+                    //创建一个查询语句
+                    var q = type(of: query).init(query.manager.from.name, query.manager.from.database)
+                    q.manager.select = query.manager.select
+                    let e = q.expression
+                    
+                    //这两种是一样的(语法区别)
+                    //写法一
+                    //SQL语句结构：select "t_user_sex","t_user_name" from "t_user"
+                    let names = try self.prepare(e.template, e.bindings).columnNames.map { $0.quote() }
+                    //写法二
+                    //SQL语句结构：select t_user_sex,t_user_name from t_user
+                    //                    let names = try self.prepare(e.template, e.bindings).columnNames
+                    
+                    //根据表字段顺序，后去表字段对应下标
+                    //获取下标目的：为了在查询数据库的时候，通过迭代器模式动态遍历字段
+                    for name in names {
+                        columnNames[name] = index
+                        index += 1
+                    }
+                    
+                }
+                
+                if column == "*" {
+                    //查询所有数据
+                    //将"*"->变成一个表达式
+                    var select = query
+                    select.manager.select = (false,[Expression<Void>(literal: "*") as Expressible])
+                    //执行查询
+                    try expandGlob(select)
+                }
+            }
+            return columnNames
+            }()
+        
+        return AnySequence {
+            AnyIterator {
+                statement.next().map{ Row(columnNames, $0) }
+            }
+        }
+    }
+
+    
 }
 
 
@@ -72,9 +137,10 @@ extension QueryType {
         return self.select(true, all)
     }
     
+    
     //处理公共功能
     //动态修改查询语句默认条件
-    fileprivate func select<Q : QueryType>(_ distinct: Bool, _ columns:[Expressible]) -> Q {
+     func select<Q : QueryType>(_ distinct: Bool, _ columns:[Expressible]) -> Q {
         //数据库中哪一个表
         //例如：db_test.t_user
         var query = Q.init(manager.from.name,manager.from.database)
@@ -82,6 +148,31 @@ extension QueryType {
         query.manager.select = (distinct, columns)
         return query
     }
+    
+    //添加具体的查询语句
+    fileprivate var selectStatement: Expressible {
+        return " ".join([
+            Expression<Void>(literal: manager.select.distinct ? "SELECT DISTINCT" : "SELECT"),
+            ", ".join(manager.select.columns),
+            Expression<Void>(literal: "FROM"),
+            tableName()
+            ])
+    }
+    
+//    public var expression:Expression<Void> {
+//        let manager: [Expressible?] = [
+//            //添加查询语句
+//            selectStatement,
+//            //添加where语句
+//            whereStatement,
+//            orderStatement,
+//            limitOffsetStatement
+//        ]
+//        //过滤器
+//        //Expression : name   sex
+//        //加入", "结果: name, sex
+//        return " ".join(manager.flatMap{ $0 }).expression
+//    }
     
 }
 
