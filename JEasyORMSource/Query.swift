@@ -82,25 +82,25 @@ extension QueryType {
         return ".".join([Expression<Void>(database),name])
     }
     
-    //添加具体的查询语句
-    fileprivate var selectStatement: Expressible {
-        return " ".join([
-            Expression<Void>(literal: manager.select.distinct ? "SELECT DISTINCT" : "SELECT"),
-            ", ".join(manager.select.columns),
-            Expression<Void>(literal: "FROM"),
-            tableName()
-            ])
-    }
-    public var expression: Expression<Void> {
-        let manager: [Expressible?] = [
-            //添加查询语句
-            selectStatement
-        ]
-        //过滤器
-        //Expression : name   sex
-        //加入", "结果: name, sex
-        return ", ".join(manager.flatMap{ $0 }).expression
-    }
+//    //添加具体的查询语句
+//    fileprivate var selectStatement: Expressible {
+//        return " ".join([
+//            Expression<Void>(literal: manager.select.distinct ? "SELECT DISTINCT" : "SELECT"),
+//            ", ".join(manager.select.columns),
+//            Expression<Void>(literal: "FROM"),
+//            tableName()
+//            ])
+//    }
+//    public var expression: Expression<Void> {
+//        let manager: [Expressible?] = [
+//            //添加查询语句
+//            selectStatement
+//        ]
+//        //过滤器
+//        //Expression : name   sex
+//        //加入", "结果: name, sex
+//        return ", ".join(manager.flatMap{ $0 }).expression
+//    }
 
     
 }

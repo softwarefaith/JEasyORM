@@ -159,20 +159,20 @@ extension QueryType {
             ])
     }
     
-//    public var expression:Expression<Void> {
-//        let manager: [Expressible?] = [
-//            //添加查询语句
-//            selectStatement,
-//            //添加where语句
-//            whereStatement,
-//            orderStatement,
-//            limitOffsetStatement
-//        ]
-//        //过滤器
-//        //Expression : name   sex
-//        //加入", "结果: name, sex
-//        return " ".join(manager.flatMap{ $0 }).expression
-//    }
+    public var expression:Expression<Void> {
+        let manager: [Expressible?] = [
+            //添加查询语句
+            selectStatement,
+            //添加where语句
+            whereStatement,
+            orderStatement,
+            limitOffsetStatement
+        ]
+        //过滤器
+        //Expression : name   sex
+        //加入", "结果: name, sex
+        return " ".join(manager.flatMap{ $0 }).expression
+    }
     
 }
 
