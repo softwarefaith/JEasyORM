@@ -40,11 +40,13 @@ public struct QueryManager {
     //添加排序
     var order = [Expressible]()
     
+    //添加分组
+    //by:表示字段列表(可以根据多个字段进行分组)
+    //having:分组基础之上的条件
+    var group:(by: [Expressible], having: Expression<Bool?>?)?
+
     //获取数量(元组)
     var limit:(length: Int, offset: Int?)?
-    
-    
-
 }
 
 //操作类型

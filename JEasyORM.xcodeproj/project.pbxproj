@@ -29,6 +29,8 @@
 		2E6C78D81F11E7B400702167 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6C78D71F11E7B400702167 /* libsqlite3.tbd */; };
 		2EB5DA261F2F134500F44BB1 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5DA241F2F134500F44BB1 /* Query.swift */; };
 		2EB5DA271F2F134500F44BB1 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5DA251F2F134500F44BB1 /* Schema.swift */; };
+		2EB5ED071F417D1500CFC6C9 /* Aggregation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5ED051F417D1500CFC6C9 /* Aggregation.swift */; };
+		2EB5ED081F417D1500CFC6C9 /* GroupBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5ED061F417D1500CFC6C9 /* GroupBy.swift */; };
 		2EC657C61F1DE5A600BFCC25 /* test.db in Resources */ = {isa = PBXBuildFile; fileRef = 2EC657C51F1DE5A600BFCC25 /* test.db */; };
 		2EE2C34C1F381065008730F0 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE2C3481F381065008730F0 /* Order.swift */; };
 		2EE2C34D1F381065008730F0 /* Limit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE2C3491F381065008730F0 /* Limit.swift */; };
@@ -83,6 +85,8 @@
 		2E6C78D71F11E7B400702167 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2EB5DA241F2F134500F44BB1 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		2EB5DA251F2F134500F44BB1 /* Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
+		2EB5ED051F417D1500CFC6C9 /* Aggregation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aggregation.swift; sourceTree = "<group>"; };
+		2EB5ED061F417D1500CFC6C9 /* GroupBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBy.swift; sourceTree = "<group>"; };
 		2EC657C51F1DE5A600BFCC25 /* test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.db; sourceTree = "<group>"; };
 		2EE2C3481F381065008730F0 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		2EE2C3491F381065008730F0 /* Limit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limit.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 				2EE2C3481F381065008730F0 /* Order.swift */,
 				2EE2C3491F381065008730F0 /* Limit.swift */,
 				2EE2C34A1F381065008730F0 /* Scalar.swift */,
+				2EB5ED051F417D1500CFC6C9 /* Aggregation.swift */,
+				2EB5ED061F417D1500CFC6C9 /* GroupBy.swift */,
 			);
 			name = Query;
 			path = "../../../../Downloads/iOSVIP课/iOS第二期-架构师课程/20170707-架构师-第29次课-ORM进阶设计-第6讲-动态操作表-复杂查询/上课案例/Dream_20170626_Architect_DatabaseFramework/Dream_20170626_Architect_DatabaseFramework/Framework/Types/Query";
@@ -375,6 +381,7 @@
 				2EB5DA271F2F134500F44BB1 /* Schema.swift in Sources */,
 				2E277DB91F31B4F90089C893 /* Value.swift in Sources */,
 				2E59EF511F0AA03300952A70 /* ViewController.swift in Sources */,
+				2EB5ED071F417D1500CFC6C9 /* Aggregation.swift in Sources */,
 				2E59EF4F1F0AA03300952A70 /* AppDelegate.swift in Sources */,
 				2E277DB21F31B4C00089C893 /* Delete.swift in Sources */,
 				2EE2C34C1F381065008730F0 /* Order.swift in Sources */,
@@ -386,6 +393,7 @@
 				2E277DBA1F31B4F90089C893 /* Statement.swift in Sources */,
 				2EE2C34E1F381065008730F0 /* Scalar.swift in Sources */,
 				2E277DBC1F31B58F0089C893 /* Operators.swift in Sources */,
+				2EB5ED081F417D1500CFC6C9 /* GroupBy.swift in Sources */,
 				2E277DB31F31B4C00089C893 /* Update.swift in Sources */,
 				2E277DB11F31B4C00089C893 /* Setter.swift in Sources */,
 				2E277DBE1F31B5EB0089C893 /* Helpers.swift in Sources */,
